@@ -148,10 +148,9 @@ func main() {
 
     ptr1 := &rect1
     /*
-    compilation error, cannot use &p (type **rectangle) as type
-    rectangle in argument to area
+    compilation error, cannot use ptr1 (type *Rectangle) as type Rectangle in argument to area
     */
-    //area(&ptr)
+    //area(ptr1)
 
     fmt.Println("Area Method Result:", ptr1.Area())//calling value receiver with a pointer
 
@@ -171,7 +170,7 @@ func main() {
 
     rect2.perimeter()//calling pointer receiver with a value
 
-	num1 := myInt(5)
+    num1 := myInt(5)
     num2 := myInt(10)
     sum := num1.add(num2)//calling method on non struct type
     fmt.Println("Sum is", sum)
